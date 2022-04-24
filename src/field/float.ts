@@ -6,7 +6,7 @@ import { FloatType } from "../validator/type";
 import { Field } from "./field";
 
 
-export class FieldFloat extends Field<number, GenericFieldType> {
+export default class FloatField extends Field<number, GenericFieldType> {
     constructor(protected template: GenericFieldType) {
         super(template)
         this.addValidators(template)

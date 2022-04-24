@@ -4,7 +4,7 @@ import { ObjectType } from "../validator/type";
 import { Field } from "./field";
 
 
-export default class Json<T> extends Field<Object, T> {
+export default class JsonField<T> extends Field<Object, T> {
     constructor(protected template: T) {
         super(template)
         this.validators = [

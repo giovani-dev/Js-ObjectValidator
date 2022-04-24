@@ -6,7 +6,7 @@ import ValidateBuilder from "../validator/builder";
 import { IntegerType } from "../validator/type";
 
 
-export default class FieldInteger extends Field<number, GenericFieldType> {
+export default class IntegerField extends Field<number, GenericFieldType> {
     
     constructor(protected template: GenericFieldType) {
         super(template)

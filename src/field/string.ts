@@ -6,7 +6,7 @@ import { StringType } from "../validator/type";
 import { Field } from "./field";
 
 
-export default class FieldString extends Field<string, GenericFieldType> {
+export default class StringField extends Field<string, GenericFieldType> {
 
     constructor(protected template: GenericFieldType) {
         super(template)

@@ -11,8 +11,8 @@
         1. Imports
         ```typescript
         import FieldInteger from "./src/field/integer"
-        import FieldString from "./src/field/string"
-        import Json from "./src/field/json"
+        import StringField from "./src/field/string"
+        import JsonField from "./src/field/JsonField"
         import ListField from "./src/field/list"
         ```
         <br>
@@ -20,11 +20,11 @@
         2. Definindo a estrutura de dados.
         ```typescript
         type templateEndereco = {
-            cep: FieldString
+            cep: StringField
         }
 
         type templateType = {
-            endereco: Json<templateEndereco>,
+            endereco: JsonField<templateEndereco>,
             permissions: ListField
         }
         ```
@@ -32,9 +32,9 @@
         
         3. Criando Schema.
         ```typescript
-        let validateObject = new Json<templateType>({
-            endereco: new Json<templateEndereco>({
-                cep: new FieldString({
+        let validateObject = new JsonField<templateType>({
+            endereco: new JsonField<templateEndereco>({
+                cep: new StringField({
                     maxLength: 256,
                     minLength: 1,
                     isRequired: true
@@ -70,8 +70,8 @@
         1. Imports
         ```typescript
         import FieldInteger from "./src/field/integer"
-        import FieldString from "./src/field/string"
-        import Json from "./src/field/json"
+        import StringField from "./src/field/string"
+        import JsonField from "./src/field/JsonField"
         import ListField from "./src/field/list"
         ```
         <br>
@@ -79,11 +79,11 @@
         2. Definindo a estrutura de dados.
         ```typescript
         type templateEndereco = {
-            cep: FieldString
+            cep: StringField
         }
 
         type templateType = {
-            endereco: Json<templateEndereco>,
+            endereco: JsonField<templateEndereco>,
             permissions: ListField
         }
         ```
@@ -93,9 +93,9 @@
         ```typescript
         let validateList = new ListField({
             isRequired: true,
-            contentType: new Json<templateType>({
-                endereco: new Json<templateEndereco>({
-                    cep: new FieldString({
+            contentType: new JsonField<templateType>({
+                endereco: new JsonField<templateEndereco>({
+                    cep: new StringField({
                         maxLength: 256,
                         minLength: 1,
                         isRequired: true
