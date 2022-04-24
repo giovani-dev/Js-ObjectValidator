@@ -1,9 +1,7 @@
 import Validator from "../validator/interface";
 
 
-
-
-export abstract class Field<ConcreteType, TemplateType> {
+export default abstract class Field<ConcreteType, TemplateType> {
     protected validators: Array<Validator<unknown, unknown>> = [];
     
     

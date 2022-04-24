@@ -3,7 +3,7 @@ import ValidateBuilder from "../validator/builder";
 import { NumberMaxLength, NumberMinLength } from "../validator/length";
 import Required from "../validator/required";
 import { FloatType } from "../validator/type";
-import { Field } from "./field";
+import Field from "./field";
 
 
 export default class FloatField extends Field<number, GenericFieldType> {

@@ -3,7 +3,7 @@ import ValidateBuilder from "../validator/builder";
 import { StringOrArrayMaxLength, StringOrArrayMinLength } from "../validator/length";
 import Required from "../validator/required";
 import { StringType } from "../validator/type";
-import { Field } from "./field";
+import Field from "./field";
 
 
 export default class StringField extends Field<string, GenericFieldType> {

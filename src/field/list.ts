@@ -3,7 +3,7 @@ import Required from "../validator/required";
 import { ListFieldType } from "../schema/listField";
 import { StringOrArrayMaxLength, StringOrArrayMinLength } from "../validator/length";
 import { ArrayType } from "../validator/type";
-import { Field } from "./field";
+import Field from "./field";
 import ValidationError from "../validator/error/validation";
 
 

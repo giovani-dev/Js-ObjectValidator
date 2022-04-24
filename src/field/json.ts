@@ -1,7 +1,7 @@
-import FieldError from "../validator/error/field";
+import FieldError from "./error/field";
 import ValidationError from "../validator/error/validation";
 import { ObjectType } from "../validator/type";
-import { Field } from "./field";
+import Field from "./field";
 
 
 export default class JsonField<T> extends Field<Object, T> {

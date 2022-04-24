@@ -1,7 +1,7 @@
 import { GenericFieldType } from "../schema/genericField";
 import { NumberMaxLength, NumberMinLength } from "../validator/length";
 import Required from "../validator/required";
-import { Field } from "./field"
+import Field from "./field"
 import ValidateBuilder from "../validator/builder";
 import { IntegerType } from "../validator/type";
 
