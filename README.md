@@ -8,7 +8,16 @@
     <br><br>
     - <b>Validando um objeto</b>
         <br>
-        1. Definindo a estrutura de dados.
+        1. Imports
+        ```typescript
+        import FieldInteger from "./src/field/integer"
+        import FieldString from "./src/field/string"
+        import Json from "./src/field/json"
+        import ListField from "./src/field/list"
+        ```
+        <br>
+
+        2. Definindo a estrutura de dados.
         ```typescript
         type templateEndereco = {
             cep: FieldString
@@ -21,7 +30,7 @@
         ```
         <br>
         
-        2. Criando Schema.
+        3. Criando Schema.
         ```typescript
         let validateObject = new Json<templateType>({
             endereco: new Json<templateEndereco>({
@@ -42,7 +51,7 @@
         ```
         <br>
 
-        3. Validando seus dados.
+        4. Validando seus dados.
         ```typescript
         validateObject.isValid({
             endereco: {
@@ -58,7 +67,16 @@
         <br><br>
     - <b>Validando uma lista de objetos</b>
         <br>
-        1. Definindo a estrutura de dados.
+        1. Imports
+        ```typescript
+        import FieldInteger from "./src/field/integer"
+        import FieldString from "./src/field/string"
+        import Json from "./src/field/json"
+        import ListField from "./src/field/list"
+        ```
+        <br>
+
+        2. Definindo a estrutura de dados.
         ```typescript
         type templateEndereco = {
             cep: FieldString
@@ -71,7 +89,7 @@
         ```
         <br>
 
-        2. Criando Schema.
+        3. Criando Schema.
         ```typescript
         let validateList = new ListField({
             isRequired: true,
@@ -95,7 +113,7 @@
         ```
         <br>
 
-        3. Validando seus dados.
+        4. Validando seus dados.
         ```typescript
         validateList.isValid([
             {
