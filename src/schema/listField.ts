@@ -1,5 +1,4 @@
-import { Field } from "../field/field";
-import { GenericFieldType } from "./genericField";
+import Field from "../field/field";
 
 
 export type ListFieldType = {

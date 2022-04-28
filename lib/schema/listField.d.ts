@@ -1,4 +1,4 @@
-import { Field } from "../field/field";
+import Field from "../field/field";
 export declare type ListFieldType = {
     validator?: (value: string) => boolean;
     maxLength?: number;
