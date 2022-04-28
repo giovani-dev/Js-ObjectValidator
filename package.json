@@ -2,7 +2,6 @@
   "name": "js-objectvalidator",
   "version": "1.0.0",
   "description": "Validate types inside a json structure",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node --transpile-only --project tsconfig.json index.ts"
