@@ -20,7 +20,7 @@ export default class ListField extends Field<Array<any>, ListFieldType> {
             try {
                 this.template.contentType.isValid(inside_value);
             } catch(err) {
-                throw new ValidationError(`${err.message} using '${inside_value}'`);
+                throw new err;
             }
         });
     }
