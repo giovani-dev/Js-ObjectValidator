@@ -1,4 +1,5 @@
-export default class ValidationError extends Error {
+export default class ValidationError<T> extends Error {
     private readonly msg;
-    constructor(msg: string);
+    private readonly expected;
+    constructor(msg: string, expected: T);
 }

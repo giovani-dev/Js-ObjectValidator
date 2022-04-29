@@ -1,13 +1,15 @@
 declare type FieldErrorType = {
-    fieldName: string;
+    field: string;
     value: any;
     message: string;
+    expected: string;
 };
 export default class FieldError extends Error {
-    private readonly msg;
-    fieldName: string;
+    readonly msg: FieldErrorType;
+    field: string;
     value: any;
     message: string;
+    expected: string;
     constructor(msg: FieldErrorType);
 }
 export {};
