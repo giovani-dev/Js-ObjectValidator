@@ -24,7 +24,8 @@ export default class JsonField<T> extends Field<Object, T> {
             throw new FieldError({
                 field: 'body',
                 value: value,
-                message: 'Validation error at:'
+                message: err.message,
+                expected: err.expected
             });
         }
         Object.keys(this.template).forEach((key: string) => {
@@ -34,7 +35,8 @@ export default class JsonField<T> extends Field<Object, T> {
                 throw new FieldError({
                     field: key,
                     value: value[key],
-                    message: err.message
+                    message: err.message,
+                    expected: err.expected
                 });
             }
         });

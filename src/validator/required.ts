@@ -5,9 +5,9 @@ import Validator from "./interface";
 export default class Required implements Validator<boolean, boolean> {
     constructor(public expected: boolean) {}
 
-    validate(value: boolean): void {
+    validate(value: any): void {
         if(value !== null || value !== undefined && this.expected) {
-            throw new ValidationError(`Is required field.`);
+            throw new ValidationError<boolean>(`Is required field.`, this.expected);
         }
     }
 

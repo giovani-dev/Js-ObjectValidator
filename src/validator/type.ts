@@ -7,7 +7,7 @@ export class IntegerType implements Validator<null, number> {
 
     validate(value: number): void {
         if(!(Number.isInteger(value)) && value !== undefined) {
-            throw new ValidationError(`Type error`);
+            throw new ValidationError<string>(`Type error`, 'Integer type.');
         }
     }
 }
@@ -17,7 +17,7 @@ export class FloatType implements Validator<null, number> {
 
     validate(value: number): void {
         if(!(!Number.isInteger(value)) && value !== undefined) {
-            throw new ValidationError(`Type error`);
+            throw new ValidationError<string>(`Type error`, 'Float type.');
         }
     }
 }
@@ -27,7 +27,7 @@ export class StringType implements Validator<null, string> {
 
     validate(value: string): void {
         if(!((typeof value).toLocaleLowerCase() === "string") && value !== undefined) {
-            throw new ValidationError(`Type error`);
+            throw new ValidationError<string>(`Type error`, 'String type.');
         }
     }
 }
@@ -37,7 +37,7 @@ export class ObjectType implements Validator<null, Object> {
 
     validate(value: Object): void {
         if(!(value.constructor === {}.constructor) && value !== undefined) {
-            throw new ValidationError(`Type error`);
+            throw new ValidationError<string>(`Type error`, 'Object type.');
         }
     }
 }
@@ -47,7 +47,7 @@ export class ArrayType implements Validator<null, Array<any>> {
 
     validate(value: Array<any>): void {
         if(!(value.constructor === [].constructor) && value !== undefined) {
-            throw new ValidationError(`Type error`);
+            throw new ValidationError<string>(`Type error`, 'Array type.');
         }
     }
 }
