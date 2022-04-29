@@ -21,29 +21,21 @@ export default class JsonField<T> extends Field<Object, T> {
         try{
             super.isValid(value)
         } catch(err) {
-            if(err instanceof ValidationError) {
-                throw new FieldError({
-                    fieldName: 'body',
-                    value: value,
-                    message: 'Validation error at:'
-                });
-            }
+            throw new FieldError({
+                field: 'body',
+                value: value,
+                message: 'Validation error at:'
+            });
         }
         Object.keys(this.template).forEach((key: string) => {
             try {
                 this.template[key].isValid(value[key]);
             } catch(err) {
-                if(err instanceof ValidationError) {
-                    throw new FieldError({
-                        fieldName: key,
-                        value: value[key],
-                        message: `${err.message} at '${key}'`
-                    });
-                }
-                if(err instanceof FieldError) {
-                    err.message = `${err.message} from '${key}'`
-                    throw err;
-                }
+                throw new FieldError({
+                    field: key,
+                    value: value[key],
+                    message: err.message
+                });
             }
         });
     }
