@@ -10,9 +10,8 @@ class CustomValidator implements Validator<boolean, any> {
 
     validate(value: any): void {
         if(!(this.func(value) === this.expected)) {
-            throw new ValidationError('Custom validation error.', this.expected)
+            throw new ValidationError('Custom validation error', this.expected)
         }
-        // return this.func(value) === this.expected
     }
 }
 
