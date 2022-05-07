@@ -6,7 +6,7 @@ export default class Required implements Validator<boolean, boolean> {
     constructor(public expected: boolean) {}
 
     validate(value: any): void {
-        if(value !== null || value !== undefined && this.expected) {
+        if((value === null || value === undefined) && this.expected) {
             throw new ValidationError<boolean>(`Is required field.`, this.expected);
         }
     }

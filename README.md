@@ -11,9 +11,9 @@
         1. Imports
         ```typescript
         import FieldInteger from "./src/field/integer"
-        import StringField from "./src/field/string"
-        import JsonField from "./src/field/JsonField"
-        import ListField from "./src/field/list"
+        import StringField from "js-objectvalidator"
+        import JsonField from "js-objectvalidator"
+        import ListField from "js-objectvalidator"
         ```
         <br>
 
@@ -70,9 +70,9 @@
         1. Imports
         ```typescript
         import FieldInteger from "./src/field/integer"
-        import StringField from "./src/field/string"
-        import JsonField from "./src/field/JsonField"
-        import ListField from "./src/field/list"
+        import StringField from "js-objectvalidator"
+        import JsonField from "js-objectvalidator"
+        import ListField from "js-objectvalidator"
         ```
         <br>
 
