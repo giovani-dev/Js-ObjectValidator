@@ -3,6 +3,7 @@ import ValidateBuilder from "../validator/builder";
 import { NumberMaxLength, NumberMinLength } from "../validator/length";
 import Required from "../validator/required";
 import { FloatType } from "../validator/type";
+import FieldValidatorError from "./error/fieldValidator";
 import Field from "./field";
 
 
@@ -38,7 +39,7 @@ export default class FloatField extends Field<number, GenericFieldType> {
                     );
                     break;
                 default:
-                    throw Error("Validator not found.");
+                    throw new FieldValidatorError("Validator not found.");
             }
         });
     }

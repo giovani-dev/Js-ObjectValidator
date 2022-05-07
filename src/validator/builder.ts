@@ -1,3 +1,4 @@
+import ValidationError from "./error/validation";
 import Validator from "./interface";
 
 
@@ -7,8 +8,10 @@ class CustomValidator implements Validator<boolean, any> {
         public expected: boolean
     ) {}
 
-    validate(value: any): boolean {
-        return this.func(value) === this.expected
+    validate(value: any): void {
+        if(!(this.func(value) === this.expected)) {
+            throw new ValidationError('Custom validation error', this.expected)
+        }
     }
 }
 
